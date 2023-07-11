@@ -64,5 +64,8 @@ Console.Write("Input a week day, from 1-7, there are only 7 days in a week, you 
 int weekday = Convert.ToInt32(Console.ReadLine());
 bool revelation = IsWeekend(weekday);
 Console.WriteLine($"The assumption that week day {weekday} is included in weekend is completely {revelation}");
+
+
 */
 
+    
