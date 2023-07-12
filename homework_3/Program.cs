@@ -38,9 +38,9 @@ Console.WriteLine("Input c: ");
 int c = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input a1: ");
 int a1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input b: ");
+Console.WriteLine("Input b1: ");
 int b1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input c: ");
+Console.WriteLine("Input c1: ");
 int c1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(Destination(a, b, c, a1, b1, c1));
 */
