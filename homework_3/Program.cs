@@ -2,7 +2,7 @@
 
 //Task 1 Напишите программу, которая принимает на вход число и проверяет, является ли оно палиндромом. 
 /*
-bool IsPoly(int num)
+bool IsPali(int num)
 {
     int reverse = 0;  // making new veriable to get reversed num
     int sym; // making veriable to get a symbol for the reverse
@@ -18,9 +18,9 @@ bool IsPoly(int num)
     else return false;
 }
 
-Console.WriteLine("Input a number to be checked for polyndromacy here: ");
+Console.WriteLine("Input a number to be checked for palindromacy (or whatever it is called) here: ");
 int numbre = Convert.ToInt32(Console.ReadLine()); // НУМБРЕ!
-Console.WriteLine($"claim that {numbre} is polyndrome is {IsPoly(numbre)}");
+Console.WriteLine($"claim that {numbre} is palindrome is {IsPali(numbre)}");
 */
 
 //Task 2 Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
