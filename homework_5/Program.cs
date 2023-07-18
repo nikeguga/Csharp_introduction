@@ -47,12 +47,12 @@ Console.WriteLine($"There are {evenCount} even numbers in array");
 //[3, 7, 23, 12] -> 19
 //[-4, -6, 89, 6] -> 0
 /*
-int [] CreateRandomArray(int size, int minVal, int maxVal)
+int[] CreateRandomArray(int size, int minVal, int maxVal)
 {
-    int [] array = new int [size];
+    int[] array = new int[size];
     for (int i = 0; i < size; i++)
     {
-          array[i] = new Random().Next(minVal, maxVal +1); //т.к. метод рандом не включает последнюю цифру
+        array[i] = new Random().Next(minVal, maxVal + 1); //т.к. метод рандом не включает последнюю цифру
     }
 
     return array;
@@ -70,12 +70,14 @@ void ShowArr(int[] array)
 
 int OddSum(int[] array)
 {
-    int sum = 0; // setting sum 
-    for (int i = 0; i < array.Length; i++) //checking everything
+
+    int sum = array[1];
+    for (int i = 3; i < array.Length; i += 2) //no need to check everything as we set sum as array[1]
     {
-        if (array[i] % 2 != 0) sum += array[i]; //getting our sum
+        if (i % 2 != 0) sum += array[i];
     }
     return sum;
+
 }
 
 Console.Write("Input size of array: ");
@@ -86,9 +88,17 @@ Console.Write("Input max of array: ");
 int max = Convert.ToInt32(Console.ReadLine());
 int[] array = CreateRandomArray(length, min, max);
 ShowArr(array);
-int oddSum = OddSum(array);
-Console.WriteLine(); // for beauty
-Console.WriteLine($"Sum of odds in array is {oddSum}, my dude");
+if (array.Length > 1) //here was the tricky part, i thought that user might input 1 in array size which will ruin the method. 
+{
+    int oddSum = OddSum(array);
+    Console.WriteLine(); // for beauty
+    Console.WriteLine($"Sum of odds in array is {oddSum}, my dude");
+}
+else
+{
+    Console.WriteLine();
+    Console.WriteLine("We need more numbers, my dude");
+}
 */
 
 //Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
