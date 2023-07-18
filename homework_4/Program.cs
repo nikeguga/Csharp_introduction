@@ -97,7 +97,7 @@ int[] Array()
     {
         Console.Write("Input an item: "); //requesting numbers
         int number = Convert.ToInt32(Console.ReadLine());
-        result[i] = number; //we increase i from zero, each number gets it sp
+        result[i] = number; //we increase i from zero, each number gets it spot
     }
 
     return result; //getting massive as result
