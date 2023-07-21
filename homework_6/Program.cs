@@ -35,10 +35,17 @@ void Crossing()
     Console.WriteLine("Input k2:");
     double k2 = Convert.ToDouble(Console.ReadLine());
 
-    double x = (b2 - b1) / (k1 - k2);
-    double y = k1 * x + b1;
-
-    Console.WriteLine($"Crossing point is ({x}, {y})");
+    if (k1 == k2)
+    {
+        if (b1 == b2) Console.WriteLine("there is no spoon, all lines are one");
+        else Console.WriteLine("The lines have nothing in common");
+    }
+    else
+    {
+        double x = (b2 - b1) / (k1 - k2);
+        double y = k1 * x + b1;
+    }
+    Console.WriteLine($"Red lines were crossed here: ({x}, {y})");
 }
 
 Crossing();
