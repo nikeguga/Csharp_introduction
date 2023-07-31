@@ -215,15 +215,28 @@ else Console.WriteLine("Ahoy, lad! No can do yer multiplies, yaarrrrrr!");
 /*
 int[,,] CreateRandom3dArray(int rows, int columns, int depth, int minValue, int maxValue)
 {
+    minValue = 10;
+    maxValue = 99;
     int[,,] array = new int[rows, columns, depth];
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < columns; j++)
             for (int k = 0; k < depth; k++)
                 array[i, j, k] = new Random().Next(minValue, maxValue + 1);
+    for (int i = 0, l = 1; i < rows; i++)
+        for (int j = 0, m = 1; j < columns; j++)
+            for (int k = 0, n = 1; k < depth; k++)
+                if (array[i, j, k] == array[l, m, n])
+                    array[l, m, n] = new Random().Next(minValue, maxValue + 1);
+                else
+                {
+                    l++;
+                    m++;
+                    k++;
+                }
     return array;
 }
 
-void Show3dArray(int[,,] array) 
+void Show3dArray(int[,,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
         for (int j = 0; j < array.GetLength(1); j++)
