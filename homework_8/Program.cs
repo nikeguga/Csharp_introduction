@@ -212,7 +212,7 @@ else Console.WriteLine("Ahoy, lad! No can do yer multiplies, yaarrrrrr!");
 
 //Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 
-/*
+
 int[,,] CreateRandom3dArray(int rows, int columns, int depth, int minValue, int maxValue)
 {
     minValue = 10;
@@ -222,9 +222,9 @@ int[,,] CreateRandom3dArray(int rows, int columns, int depth, int minValue, int 
         for (int j = 0; j < columns; j++)
             for (int k = 0; k < depth; k++)
                 array[i, j, k] = new Random().Next(minValue, maxValue + 1);
-    for (int i = 0, l = 1; i < rows; i++)
-        for (int j = 0, m = 1; j < columns; j++)
-            for (int k = 0, n = 1; k < depth; k++)
+    for (int i = 0, l = 1; i < rows-1 && l < rows; i++)
+        for (int j = 0, m = 1; j < columns -1 && m < columns; j++)
+            for (int k = 0, n = 1; k < depth && n< depth; k++)
                 if (array[i, j, k] == array[l, m, n])
                     array[l, m, n] = new Random().Next(minValue, maxValue + 1);
                 else
@@ -258,7 +258,7 @@ Console.WriteLine("input max: ");
 int max = Convert.ToInt32(Console.ReadLine());
 int[,,] myArray = CreateRandom3dArray(rows, columns, depth, min, max);
 Show3dArray(myArray);
-*/
+
 
 /*
 Задача 62. Напишите программу, которая заполнит спирально массив a на b.
