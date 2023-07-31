@@ -222,9 +222,10 @@ int[,,] CreateRandom3dArray(int rows, int columns, int depth, int minValue, int 
         for (int j = 0; j < columns; j++)
             for (int k = 0; k < depth; k++)
                 array[i, j, k] = new Random().Next(minValue, maxValue + 1);
-    for (int i = 0, l = i +1; i < rows-1 && l < rows; i++)    // а вот тут начинаем цикл проверки на равенство элементов.
+    for (int i = 0, l = i + 1; i < rows-1 && l < rows; i++)    // а вот тут начинаем цикл проверки на равенство элементов.
         for (int j = 0, m = j + 1; j < columns -1 && m < columns; j++)
             for (int k = 0, n = k + 1; k < depth -1 && n < depth; k++)
+            {
                 if (array[i, j, k] == array[l, m, n])
                     array[l, m, n] = new Random().Next(minValue, maxValue + 1);
                 else
@@ -233,6 +234,7 @@ int[,,] CreateRandom3dArray(int rows, int columns, int depth, int minValue, int 
                     m++;
                     k++;
                 }
+            }
     return array;
 }
 
